@@ -1,0 +1,30 @@
+plugins {
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.1.0'
+}
+
+group = 'com.example'
+version = '0.1.0'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(20)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.google.code.gson:gson:2.10.1'
+}
+
+javafx {
+    version = '20.0.2'
+    modules = ['javafx.controls', 'javafx.fxml', 'javafx.swing']
+}
+
+application {
+    mainClass = 'com.example.eoe.App'
+}

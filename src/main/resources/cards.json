@@ -1,0 +1,44 @@
+[
+  {"name":"フレア・ソルジャー","type":"ENTITY","attribute":"VOLCANO","atk":"5","cost":"2","effect":"なし"},
+  {"name":"マグマ・ハウンド","type":"ENTITY","attribute":"VOLCANO","atk":"4","cost":"3","effect":"【顕現】した時、相手の【ガード】を持つモンスター1体を破壊する。"},
+  {"name":"パイロ・インプ","type":"ENTITY","attribute":"VOLCANO","atk":"2","cost":"1","effect":"このエンティティが攻撃し、相手エレメントにダメージを与えた時、自分はコストを1枚払うことができる。払った場合、ライブラリからカードを1枚引く。"},
+  {"name":"クリムゾン・ドレイク","type":"ENTITY","attribute":"VOLCANO","atk":"8","cost":"4","effect":"このエンティティの攻撃宣言に対し、相手は【ガード】を発動できない。"},
+  {"name":"フレイム・キッズ","type":"ENTITY","attribute":"VOLCANO","atk":"2","cost":"0","effect":"このエンティティは【再生】できない。"},
+
+  {"name":"タイダル・サーペント","type":"ENTITY","attribute":"SEA","atk":"5","cost":"3","effect":"このエンティティが攻撃宣言する時、相手エレメントはスキルチェックでスキルを発動できない。"},
+  {"name":"氷河の落とし子","type":"ENTITY","attribute":"SEA","atk":"1","cost":"1","effect":"このエンティティが破壊された時、相手エンティティ1体の攻撃力を次のターン終了まで －1する。"},
+  {"name":"ミスト・ミラージュ","type":"ENTITY","attribute":"SEA","atk":"5","cost":"3","effect":"このエンティティより元々のATKが高いエンティティとバトルする時、1ターンに1度だけ破壊されない。"},
+  {"name":"深海のアビス・レイ","type":"ENTITY","attribute":"SEA","atk":"6","cost":"5","effect":"【顕現】した時、エリアに他の【海属性】が存在するなら、相手のハンドをランダムに1枚選択し、レムナントへ送る。その後、相手のエリアのエンティティ1体を選択し、破壊する。"},
+  {"name":"癒しの珊瑚礁","type":"ENTITY","attribute":"SEA","atk":"0","cost":"2","effect":"●【拘束】\n●【不可侵】\n●このエンティティが自分のエリアに存在する限り、自分のエリアの他の【海属性】は+2される。"},
+
+  {"name":"アイアン・ウッド","type":"ENTITY","attribute":"FOREST","atk":"4","cost":"2","effect":"【ガード】"},
+  {"name":"森々の巨人","type":"ENTITY","attribute":"FOREST","atk":"2","cost":"3","effect":"このエンティティのATKが＋される時、その数値を2増やす。このエンティティに対するATKの±効果は、ターン終了時に失われない。"},
+  {"name":"芽吹く妖精","type":"ENTITY","attribute":"FOREST","atk":"1","cost":"1","effect":"【顕現】した時、このエンティティ以外の自分のエリアのエンティティ1体を選択する。そのエンティティの攻撃力を ＋1する。"},
+  {"name":"エルダー・トレント","type":"ENTITY","attribute":"FOREST","atk":"6","cost":"4","effect":"【顕現】した時、自分のレムナントにコスト1以下の【森属性】があるなら、自分のエリアに【再生】することが出来る。自分のエリアに他の【森属性】が存在する限り、このエンティティの攻撃力を他の【森属性】1体につき＋2する。"},
+  {"name":"舞踊る妖精","type":"ENTITY","attribute":"FOREST","atk":"1","cost":"2","effect":"【顕現】した時、ハンドの元々のコスト1以下の【森属性】1体を、コストを払わず【顕現】できる。"},
+
+  {"name":"ダンシング・クラウド","type":"ENTITY","attribute":"SKY","atk":"1","cost":"1","effect":"【顕現】した時、ライブラリからカードを1枚引く。その後、ハンドを1枚選択してレムナントへ送る。"},
+  {"name":"ストーム・イーグル","type":"ENTITY","attribute":"SKY","atk":"7","cost":"4","effect":"このエンティティが攻撃宣言をしたバトルの時、相手が【宇宙属性】なら、バトルを行わずに破壊する。"},
+  {"name":"ゲイル・スワロー","type":"ENTITY","attribute":"SKY","atk":"1","cost":"0","effect":"なし"},
+  {"name":"スカイ・ファルコン","type":"ENTITY","attribute":"SKY","atk":"4","cost":"2","effect":"【顕現】した時、レムナントから「スキルカード」を1枚選択し、デッキに戻してシャッフルする。"},
+  {"name":"リビングデッド・ナイト","type":"ENTITY","attribute":"SKY","atk":"3","cost":"2","effect":"レムナントに存在する時、このエンティティのコストを支払うことで【再生】できる。【再生】した時、【ガード】を持つ。"},
+
+  {"name":"ヴォイド・ゲート","type":"ENTITY","attribute":"COSMOS","atk":"0","cost":"3","effect":"このエンティティは攻撃されない。自分のエンドフェイズに、このエンティティのATKを＋2する。"},
+  {"name":"ギャラクシー・ベヒモス","type":"ENTITY","attribute":"COSMOS","atk":"8","cost":"4","effect":"【火山・海・森属性】に攻撃宣言した時、そのエンティティをターン終了時まで－2する。"},
+  {"name":"アンノウン・グレイ","type":"ENTITY","attribute":"COSMOS","atk":"9","cost":"5","effect":"このエンティティがエリアに存在する限り、スキルカードの効果を受けない。"},
+
+  {"name":"ボルカニック・シールド","type":"SKILL","attribute":"SKILL","category":"サポート","cost":"2","effect":"【火山属性】を1体選択する。それは、ターン終了時まで他のカードの効果を受けない。","skillEffect":"GRANT_IMMUNITY"},
+  {"name":"アイシクル・トラップ","type":"SKILL","attribute":"SKILL","category":"妨害","cost":"2","effect":"エリアのエンティティ1体を選択する。そのATKを－3する。エリアに【海属性】がいるなら、代わりに－5する。","skillEffect":"MODIFY_ATK"},
+  {"name":"スピリット・バーク","type":"SKILL","attribute":"SKILL","category":"装備","cost":"1","effect":"このカードを装備している限り、装備したエンティティのATKを＋2する。それが【森属性】なら、さらに ＋1する。","skillEffect":"EQUIP"},
+  {"name":"ホワイトフェザー","type":"SKILL","attribute":"SKILL","category":"サポート","cost":"2","effect":"エリアのエンティティ1体を選択する。ターン終了時まで、それは「エンティティをバトルで破壊した時、破壊したエンティティのATK分のダメージを相手エレメントに与える」を持つ。選択したエンティティが【空属性】なら、ターン終了時までATKを＋2する。","skillEffect":"GRANT_TRAMPLE"},
+
+  {"name":"アトモスフィア・アーマー","type":"SKILL","attribute":"SKILL","category":"装備","cost":"2","effect":"装備したエンティティは 【ガード】 を持つ。","skillEffect":"EQUIP"},
+  {"name":"ピュリファイ・ブリーズ","type":"SKILL","attribute":"SKILL","category":"妨害","cost":"1","effect":"装備されている「装備カード」を1枚選択する。それを破壊する。","skillEffect":"DESTROY_EQUIPMENT"},
+  {"name":"リサイクル・アース","type":"SKILL","attribute":"SKILL","category":"サポート","cost":"2","effect":"自分のレムナントから【宇宙属性】以外のコスト3以下のエンティティ1体をハンドに加える。更にコストを2払うなら、レムナントから【宇宙属性】以外のコスト3以下のエンティティ1体を【再生】する。","skillEffect":"RECYCLE"},
+  {"name":"アース・パルス","type":"SKILL","attribute":"SKILL","category":"サポート","cost":"1","effect":"選択したエンティティの攻撃力を、ターン終了時まで＋2する。レムナントに【宇宙属性】が無いなら、代わりに＋3する。","skillEffect":"MODIFY_ATK"},
+  {"name":"アーマー・バインド","type":"SKILL","attribute":"SKILL","category":"妨害","cost":"2","effect":"ターン終了時まで、相手は【ガード】を発動できない。","skillEffect":"DISABLE_GUARD"},
+  {"name":"死霊術師の呪縛","type":"SKILL","attribute":"SKILL","category":"装備","cost":"3","effect":"自分のレムナントのエンティティ1体を選択する。それを【再生】し、このカードを装備する。このカードが装備されている限り、自分のターン終了時、自分のエレメントに3ダメージ。","skillEffect":"REVIVE_EQUIP"},
+  {"name":"ブレイク・ブレイク","type":"SKILL","attribute":"SKILL","category":"妨害","cost":"3","effect":"相手のエリアのエンティティ1体を選択する。それを破壊する。レムナントにある時、このカードを【封印】し、このカードのコストを払う事ができる。その場合、攻撃宣言したエンティティ1体を選択する。それを破壊する。","skillEffect":"DESTROY_ENEMY_ENTITY"},
+  {"name":"カタストロフ・レイ","type":"SKILL","attribute":"A_SKILL","category":"妨害","cost":"4 or all","effect":"エリアのエンティティ全てを破壊する。","skillEffect":"DESTROY_ALL_ENTITIES"},
+  {"name":"コズミック・ノヴァ","type":"SKILL","attribute":"A_SKILL","category":"妨害","cost":"3 or all","effect":"●このカードはスキルフェイズでは発動できない。\n●攻撃宣言したエンティティ1体を選択する。そのATKをターン終了時まで0にする。\n●レムナントにある時、このカードを【封印】し、コストallを払う事ができる。その場合、攻撃宣言したエンティティ1体を選択する。そのATKをターン終了時まで0にする。","skillEffect":"ZERO_ATTACKER_ATK"}
+]
