@@ -184,6 +184,9 @@ public class App extends Application {
     /** 封印枠のラベル（枚数表示の更新用）。 */
     private Label playerSealCellLabel;
     private Label opponentSealCellLabel;
+    /** ライブラリ枠のラベル（残り枚数表示の更新用）。 */
+    private Label playerLibraryCellLabel;
+    private Label opponentLibraryCellLabel;
 
     /** 選択（コスト支払い等）の二段階確認バー。 */
     private HBox confirmBar;
@@ -362,6 +365,8 @@ public class App extends Application {
         maybeRunNpcTurn();
     }
 
+    /** 開発用: 現在の画面をPNGに保存するユーティリティ（通常は未使用）。 */
+    @SuppressWarnings("unused")
     private void saveAppSnapshot(Scene scene) {
         try {
             WritableImage image = scene.snapshot(null);
@@ -4592,6 +4597,13 @@ public class App extends Application {
                 } else {
                     playerSealCellLabel = label;
                 }
+            } else if (cardName.equals("ライブラリ")) {
+                // ライブラリは枚数のみ表示する（残り枚数）。
+                if (inverted) {
+                    opponentLibraryCellLabel = label;
+                } else {
+                    playerLibraryCellLabel = label;
+                }
             }
             grid.add(cellWrapper, actualCol, zoneRow);
         }
@@ -4646,6 +4658,12 @@ public class App extends Application {
         }
         if (opponentSealCellLabel != null) {
             opponentSealCellLabel.setText("封印\n(" + state.opponentSeal.size() + ")");
+        }
+        if (playerLibraryCellLabel != null) {
+            playerLibraryCellLabel.setText("ライブラリ\n(" + state.playerLibrary.size() + ")");
+        }
+        if (opponentLibraryCellLabel != null) {
+            opponentLibraryCellLabel.setText("ライブラリ\n(" + state.opponentLibrary.size() + ")");
         }
         // 開いているレムナント一覧があれば内容を更新する。
         if (remnantListPanel != null && remnantListPanel.isVisible() && remnantListOwner != null) {

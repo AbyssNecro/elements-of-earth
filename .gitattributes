@@ -1,0 +1,15 @@
+# 既定: テキストは自動判定し、リポジトリ内では LF に正規化する
+* text=auto
+
+# Windows 用スクリプトは CRLF を維持
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Unix 用スクリプト / Gradle ラッパーは LF を維持
+gradlew  text eol=lf
+*.sh     text eol=lf
+
+# バイナリ（差分・改行変換の対象外）
+*.png binary
+*.jpg binary
+*.jar binary
